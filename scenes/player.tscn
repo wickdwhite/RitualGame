@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://cnpufhcnp0uly"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_jkt4j"]
+[ext_resource type="Texture2D" uid="uid://bhtf2ofq26awa" path="res://art/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character_Red.png" id="1_pu4nh"]
+
+[sub_resource type="Curve" id="Curve_6jrmq"]
+_data = [Vector2(0.0103093, 0.915789), 0.0, 0.0, 0, 0, Vector2(0.984536, 0.442105), -1.54918, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ng2"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heyvp"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m1bb"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2xib"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujaqi"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi8a6"]
+atlas = ExtResource("1_pu4nh")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swpvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8ng2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_heyvp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m1bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2xib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujaqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi8a6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8li8"]
+radius = 3.0
+height = 14.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_jkt4j")
+dash_curve = SubResource("Curve_6jrmq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_swpvp")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_t8li8")
