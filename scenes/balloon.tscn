@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://winhceqryjam"]
+[gd_scene load_steps=16 format=3 uid="uid://winhceqryjam"]
 
 [ext_resource type="Script" path="res://scripts/balloon.gd" id="1_nvsx6"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -6,6 +6,9 @@
 [ext_resource type="FontFile" uid="uid://bwyh1adk6c7c2" path="res://fonts/Gothbit.ttf" id="3_6e1v5"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="FontFile" uid="uid://8kmieqk7u8ho" path="res://fonts/LastPriestess.ttf" id="5_w8lrd"]
+[ext_resource type="Texture2D" uid="uid://dqjv2hdwpnsfk" path="res://art/PixelPlatformerSet1v.1.1/niya1.png" id="7_b5kpb"]
+[ext_resource type="Texture2D" uid="uid://m0qp0lfmk411" path="res://art/PixelPlatformerSet1v.1.1/niya2.png" id="8_uhp2s"]
+[ext_resource type="Texture2D" uid="uid://dqmcsws8oslqd" path="res://art/PixelPlatformerSet1v.1.1/niya3.png" id="9_pmyg8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,6 +69,26 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_x60me"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uhp2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pmyg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uhp2s")
+}, {
+"duration": 30.0,
+"texture": ExtResource("7_b5kpb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_nvsx6")
@@ -103,10 +126,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -485.5
-offset_top = -328.0
-offset_right = 409.5
-offset_bottom = -26.0
+offset_left = -549.5
+offset_top = -371.0
+offset_right = 549.5
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_fdgw7")
@@ -115,13 +137,13 @@ texture = ExtResource("2_fdgw7")
 unique_name_in_owner = true
 modulate = Color(0.0117647, 0.141176, 0.137255, 1)
 layout_mode = 2
-offset_left = 183.0
-offset_top = 55.0
-offset_right = 305.0
-offset_bottom = 111.0
+offset_left = 230.0
+offset_top = 68.0
+offset_right = 376.0
+offset_bottom = 124.0
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("3_6e1v5")
-theme_override_font_sizes/normal_font_size = 27
+theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -132,10 +154,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 75.0
-offset_top = 88.0
-offset_right = -265.0
-offset_bottom = -69.0
+offset_left = 110.0
+offset_top = 113.0
+offset_right = -336.0
+offset_bottom = -85.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -172,6 +194,13 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1028.88, 434.085)
+scale = Vector2(2.67908, 2.67908)
+sprite_frames = SubResource("SpriteFrames_x60me")
+autoplay = "default"
+frame_progress = 0.189999
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

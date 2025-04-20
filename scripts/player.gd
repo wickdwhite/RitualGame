@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var walk_speed : float = 58.0
-@export var jump_velocity = -220.0
+@export var walk_speed : float = 62.0
+@export var jump_velocity = -230.0
 @export_range(0,1) var deceleration =0.1
 @export_range(0,1) var acceleration =0.1
 @export_range(0,1) var decelerate_on_jump_release = 0.4
@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var dash_max_distance = 21.0
 @export var dash_curve: Curve
 @export var dash_cooldown = 1.0
+@export var coyote_time = 0.1
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 
@@ -22,6 +23,8 @@ var dash_start_position = 0
 var dash_direction = 0
 var dash_timer = 0
 
+var was_on_floor = false
+var coyote_timer = 0.0
 
 func _physics_process(delta):
 	
@@ -30,13 +33,27 @@ func _physics_process(delta):
 		_animated_sprite.play("walk")
 	else:
 		_animated_sprite.play("idle")
+		
+	if is_on_floor():
+		was_on_floor = true
+		coyote_timer = coyote_time
+	else:
+		#decrease coyote timer when not on floor
+		if coyote_timer > 0:
+			coyote_timer -= delta
+		
+		#if we were previously on floor but aren't now
+		if was_on_floor:
+			was_on_floor = false
 	
 	#gravityyy
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		_animated_sprite.play("jump")
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_timer > 0):
 		velocity.y = jump_velocity
+		coyote_timer = 0
 		
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y *= decelerate_on_jump_release
