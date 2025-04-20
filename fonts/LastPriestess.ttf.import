@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/LastPriestess.ttf-d44d9f5bba6960ed8fe59e015cc
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
