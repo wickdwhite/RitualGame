@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cqv2ecqb3ukxr"]
+[gd_scene load_steps=22 format=3 uid="uid://cqv2ecqb3ukxr"]
 
 [ext_resource type="Texture2D" uid="uid://dlxahgdutdtvv" path="res://art/PixelPlatformerSet1v.1.1/testbg.png" id="1_biflf"]
 [ext_resource type="PackedScene" uid="uid://cnpufhcnp0uly" path="res://scenes/player.tscn" id="1_h2hwr"]
@@ -13,7 +13,8 @@
 [ext_resource type="Script" path="res://scripts/Letter.gd" id="9_vm6mq"]
 [ext_resource type="Texture2D" uid="uid://dopenmdup38i" path="res://art/PixelPlatformerSet1v.1.1/letter.png" id="9_xlm36"]
 [ext_resource type="AudioStream" uid="uid://bp3mmp8wjksjh" path="res://audio/whirling_of_time_bg.mp3" id="11_ismc4"]
-[ext_resource type="Script" path="res://scenes/letter_pickup_area.gd" id="14_wfj7t"]
+[ext_resource type="Script" path="res://scripts/letter_pickup_area.gd" id="14_wfj7t"]
+[ext_resource type="PackedScene" uid="uid://c284xtxinnfia" path="res://scenes/sunlight.tscn" id="15_xnbeg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhgaj"]
 texture = ExtResource("3_7021h")
@@ -2143,6 +2144,10 @@ script = ExtResource("14_wfj7t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LetterPickupArea"]
 position = Vector2(85, -3)
 shape = SubResource("RectangleShape2D_nohv7")
+
+[node name="Sunlight2" parent="." instance=ExtResource("15_xnbeg")]
+position = Vector2(60, -52)
+scale = Vector2(2.015, 2.015)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
