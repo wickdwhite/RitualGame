@@ -22,7 +22,7 @@ func _on_body_exited(body):
 		label.hide()
 		
 func _process(_delta):
-	if player_inside and Input.is_action_just_pressed("interact"):
+	if player_inside and Input.is_action_just_pressed("interact") and not interact_tutorial_seen:
 		letter_sprite.hide_letter()
 		label.hide()
 		interact_tutorial_seen=true;
