@@ -26,6 +26,9 @@ var dash_timer = 0
 var was_on_floor = false
 var coyote_timer = 0.0
 
+var letters_collected = 0
+var holding_letter = false
+
 func _physics_process(delta):
 	
 	var _animated_sprite = $AnimatedSprite2D
@@ -89,3 +92,6 @@ func _physics_process(delta):
 	
 	var isLeft = velocity.x < 0
 	animated_sprite_2d.flip_h = isLeft
+	
+func collect_letter():
+	letters_collected += 1
