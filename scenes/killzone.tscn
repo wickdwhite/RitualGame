@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://qnorjo2lnoco"]
+[gd_scene load_steps=2 format=3 uid="uid://b2ow1ou5y8kgi"]
 
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="1_0ttmn"]
 
@@ -6,7 +6,7 @@
 script = ExtResource("1_0ttmn")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.6
+wait_time = 0.04
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

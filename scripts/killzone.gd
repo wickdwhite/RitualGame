@@ -1,10 +1,12 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
+#@onready var player = $".../player"
 
 
 
 func _on_body_entered(body: Node2D) -> void:
+	#player.visible = false
 	print("You died")
 	timer.start()
 	

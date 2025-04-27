@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c284xtxinnfia"]
+[gd_scene load_steps=6 format=3 uid="uid://d1li4c7brwdcs"]
 
 [ext_resource type="Shader" path="res://sunlight.gdshader" id="1_gummc"]
-[ext_resource type="PackedScene" uid="uid://qnorjo2lnoco" path="res://scenes/killzone.tscn" id="2_iko0o"]
+[ext_resource type="PackedScene" uid="uid://b2ow1ou5y8kgi" path="res://scenes/killzone.tscn" id="2_iko0o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aew07"]
 shader = ExtResource("1_gummc")
