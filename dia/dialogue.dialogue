@@ -1,8 +1,16 @@
 ~ start
-Niyana: This letter is...
-Niyana: I'd recognize this handwriting anywhere.
-Niyana: We wrote to each other often, but I... I've never seen this one
-Niyana: Are there more around? 
+Niyana: ...
+Niyana: It's strange being back here again after all this time. 
+Niyana: Strange seeing the home you insisted on keeping so tidy and spotless all the time collecting dust and fractures.
+Niyana: So little has changed... yet I find myself a stranger to it all. The years have hollowed this place, as they have hollowed me.
+Niyana: It's colder than I remember...
+Niyana: Or maybe... it's just me.
+Niyana: ...
+Niyana: I kept my promise. 
+Niyana: Kept away for long enough that I've even forgotton my sense of self.
+Niyana: But, you know...
+Niyana: I've walked the breadth of a few lifetimes... yet every road returns me here. I always knew that. No matter where I went, no matter what I did, I would find my way back here... to you.
+Niyana: Just one step more. One breath more. 
 #Niyana: [[Hi|Hello|Howdy]] Here are some choices. 
 #- First one
 #	Nathan: You picked the first one.
@@ -11,4 +19,49 @@ Niyana: Are there more around?
 #- Start again => start
 #- End the conversation => END
 #Nathan: For more information see the online documentation.
+=> END
+
+~ letter1
+Niyana: This letter is...
+Niyana: I'd recognize this handwriting anywhere.
+Niyana: We wrote to each other often, but I... I've never seen this one
+Niyana: Are there more around? 
+=> END
+
+~ letter2
+Niyana: How useless am I that I took eons to take notice of your... hate.
+Niyana: How useless, to rob us of more time we could've had together.
+=> END
+
+~ letter3
+Niyana: I... remember that day.
+Niyana: I wish I'd been braver to voice my affections then
+Niyana: Openly
+Niyana: Without fear or reservation. Without the walls to hide us
+Niyana: Maybe then... it never would've come to this.
+=> END
+
+~ letter4
+Niyana: I'd picked out that clock personally for you. It frustrated me that it wasn't perfect.
+Niyana: Hah... we had so many pointless conversations and useless quarrels.
+Niyana: ...
+Niyana: What I wouldn't give to have one with you right now.
+=> END
+
+~ letter5
+Niyana: That's right... our precious little hellion...
+Niyana: Disappeared one night and never returned.
+Niyana: I hope she lived well.
+=> END
+
+~ letter6
+Niyana: That's right... the painting that started it all.
+Niyana: Presented you with a cure to your quietest fear that never quite dissipated, despite your honeyed reassurances.
+Niyana: I was no stranger to seeing you empassioned--absorbed into your studies, enraptured in your romantic prose--but... it was never like that. It was different that time.
+Niyana: I never held the same anxieties, I was content to fade and be forgotten as long as I had you now, ephemeral as it was.
+Niyana: But you... you did not want that fate for either of us. I'd resisted the idea for so long. I know it bothered you, bur you respected my decision nevertheless.
+Niyana: ...
+Niyana: Your patience paid off in the end... because who could resist the notion of eternity with you?
+Niyana: ...
+Niyana: Or perhaps it didn't. Because it never does turn out the way we hope, does it?
 => END

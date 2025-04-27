@@ -5923,6 +5923,7 @@ position = Vector2(336, -23)
 shape = SubResource("RectangleShape2D_x8vyt")
 
 [node name="SceneTransitionAnimation" parent="." instance=ExtResource("17_qnyti")]
+visible = false
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

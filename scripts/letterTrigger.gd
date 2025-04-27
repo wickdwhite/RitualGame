@@ -34,7 +34,7 @@ func _process(_delta):
 		label.hide()
 		interact_tutorial_seen=true;
 		$PaperSound.play()
-		DialogueManager.show_dialogue_balloon(resource, "start")
+		DialogueManager.show_dialogue_balloon(resource, "letter1")
 		print("grabbed")
 		player.holding_letter = true
 		
