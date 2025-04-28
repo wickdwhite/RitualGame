@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var LetterText = $ScrollContainer/Label
 @onready var CloseButton = $CloseButton
+@onready var PickupArea = get_node("/root/Node2D/Letter pickup area")
 
 
 func _ready():
@@ -29,6 +30,7 @@ func show_letter():
 
 func _on_close_pressed():
 	visible = false
+	PickupArea.change_scene()
 
 
 

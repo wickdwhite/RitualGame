@@ -277,11 +277,10 @@ zoom = Vector2(2, 2)
 limit_left = -320
 limit_bottom = 167
 
-[node name="SceneTransitionAnimation" parent="." instance=ExtResource("13_whjo5")]
-visible = false
-
 [node name="Letter pickup area" parent="." instance=ExtResource("14_er54u")]
 position = Vector2(892, -49)
+
+[node name="SceneTransitionAnimation" parent="." instance=ExtResource("13_whjo5")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
