@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://brrsqo6wpo5ww"]
+
+[ext_resource type="Texture2D" uid="uid://c6i4r4mbtqiqi" path="res://art/PixelPlatformerSet1v.1.1/paper.png" id="1_854tc"]
+[ext_resource type="FontFile" uid="uid://8kmieqk7u8ho" path="res://fonts/LastPriestess.ttf" id="2_mh6ca"]
+
+[node name="paperUI" type="CanvasLayer"]
+
+[node name="Paper" type="Sprite2D" parent="."]
+position = Vector2(624, 352)
+scale = Vector2(1.88235, 1.88235)
+texture = ExtResource("1_854tc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 448.0
+offset_top = 104.0
+offset_right = 824.0
+offset_bottom = 584.0
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.266667, 0.223529, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_mh6ca")
+theme_override_font_sizes/font_size = 16
+text = "Niyana,
+
+I confess I’ve never been much of a scribe like Alev, or 
+a lyrist like you. I’ve certainly never been a poet. 
+Though I find I should like to be one today to express 
+the thralldom of my rent heart.
+
+Do you recall that dusken hour in the west library? 
+I had barely begun to know you, yet I confessed my 
+fears to you entirely unbidden—that my life would 
+vanish like breath on glass: quick, warm, then gone. 
+You then turned the writing of some greek poet that 
+had captured your rapt attention for the better part 
+of two hours to me and motioned towards a line:
+Even in an age unlike our own,
+Someone will remember who we are
+
+I cannot say I believed it then… but the manner in 
+which your visage brightened and split into a 
+honey-sweet grin simply at the prospect of 
+raising my spirits—well, I haven’t had much room 
+in my head for such fears since.
+
+You alone have haunted me each day since. I saw 
+you again in memory this morning—you had that 
+same errant curl falling against your brow—
+perpetually defiant, just like you. My quill scratches 
+as though it were a beast restless in its stall, longing 
+to speak what I dare not say aloud, for the walls are 
+thinner than silence and my heart a poor vault indeed. 
+That day, you looked to me of the Evening star; fairest 
+of the stars, I’m told. A sighting of Venus herself. 
+
+I am not made for this sort of feeling, Ni. It scrapes the 
+inside of my chest, leaving me raw and ruinous. But if 
+ruin comes wearing your voice, I suppose I shall meet 
+it with open arms.
+
+Yours, more than I ever intended to be,
+E"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 808.0
+offset_top = 72.0
+offset_right = 834.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("2_mh6ca")
+text = "X"

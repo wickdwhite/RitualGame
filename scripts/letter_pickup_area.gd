@@ -11,7 +11,8 @@ func _ready():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player" and player.holding_letter == true:  #making sure it detects correct object
-		player.collect_letter()
+		#player.collect_letter()
+		Global.letters_collected += 1
 		print("collected")
 		letter_sprite.hide_letter()
 		player.holding_letter = false
