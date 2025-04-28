@@ -20,4 +20,5 @@ func _process(delta):
 func _on_leave_room_body_entered(body):
 	SceneTransitionAnimation.play("fade_in")
 	await get_tree().create_timer(1.5).timeout
+	Global.intro_seen = true
 	get_tree().change_scene_to_file("res://scenes/hall.tscn") 

@@ -1,4 +1,5 @@
 extends Node
+
 var intro_seen = false
 var letters_collected = 0
 
