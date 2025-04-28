@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export_range(0,1) var decelerate_on_jump_release = 0.4
 
 @export var dash_speed = 400.0
-@export var dash_max_distance = 21.0
+@export var dash_max_distance = 60.0
 @export var dash_curve: Curve
 @export var dash_cooldown = 1.0
 @export var coyote_time = 0.1
@@ -93,5 +93,5 @@ func _physics_process(delta):
 	var isLeft = velocity.x < 0
 	animated_sprite_2d.flip_h = isLeft
 	
-#func collect_letter():
-#	letters_collected += 1
+func collect_letter():
+	letters_collected += 1
