@@ -1,22 +1,22 @@
-[gd_scene load_steps=19 format=3 uid="uid://cxn0jom55kpeb"]
+[gd_scene load_steps=19 format=3 uid="uid://un3fcyabma4n"]
 
-[ext_resource type="Texture2D" uid="uid://b4be7bu7tygpm" path="res://art/PixelPlatformerSet1v.1.1/levelbg.png" id="1_rtgvv"]
-[ext_resource type="Texture2D" uid="uid://1bccn61y51ct" path="res://art/PixelPlatformerSet1v.1.1/tile.png" id="2_hxbjq"]
-[ext_resource type="Texture2D" uid="uid://c4hm71m52dprv" path="res://art/PixelPlatformerSet1v.1.1/intact_windows.png" id="3_pelwt"]
-[ext_resource type="Texture2D" uid="uid://h602u5al4ug7" path="res://art/PixelPlatformerSet1v.1.1/broken_windows.png" id="4_6xm80"]
-[ext_resource type="PackedScene" uid="uid://d1li4c7brwdcs" path="res://scenes/sunlight.tscn" id="5_23pbh"]
-[ext_resource type="Script" path="res://scripts/letterTrigger.gd" id="6_sxjv0"]
-[ext_resource type="Texture2D" uid="uid://dopenmdup38i" path="res://art/PixelPlatformerSet1v.1.1/letter.png" id="7_glllg"]
-[ext_resource type="Script" path="res://scripts/Letter.gd" id="8_0r2vo"]
-[ext_resource type="FontFile" uid="uid://8kmieqk7u8ho" path="res://fonts/LastPriestess.ttf" id="9_rnq3x"]
-[ext_resource type="AudioStream" uid="uid://cfqidwiok66j7" path="res://audio/paper.wav" id="10_n2n8u"]
-[ext_resource type="PackedScene" uid="uid://b2ow1ou5y8kgi" path="res://scenes/killzone.tscn" id="11_cd7ck"]
-[ext_resource type="PackedScene" uid="uid://cnpufhcnp0uly" path="res://scenes/player.tscn" id="12_4mnok"]
-[ext_resource type="PackedScene" uid="uid://b7ynhp24wnab4" path="res://scenes/scene_transition_animation.tscn" id="13_dugya"]
-[ext_resource type="PackedScene" uid="uid://5hdxsgxpydhb" path="res://scenes/letter_pickup_area.tscn" id="14_5kior"]
+[ext_resource type="Texture2D" uid="uid://b4be7bu7tygpm" path="res://art/PixelPlatformerSet1v.1.1/levelbg.png" id="1_opm82"]
+[ext_resource type="Texture2D" uid="uid://1bccn61y51ct" path="res://art/PixelPlatformerSet1v.1.1/tile.png" id="2_3rwg3"]
+[ext_resource type="Texture2D" uid="uid://c4hm71m52dprv" path="res://art/PixelPlatformerSet1v.1.1/intact_windows.png" id="3_es3yn"]
+[ext_resource type="Texture2D" uid="uid://h602u5al4ug7" path="res://art/PixelPlatformerSet1v.1.1/broken_windows.png" id="4_ckjds"]
+[ext_resource type="PackedScene" uid="uid://d1li4c7brwdcs" path="res://scenes/sunlight.tscn" id="5_782bj"]
+[ext_resource type="Script" path="res://scripts/letterTrigger.gd" id="6_gbxoe"]
+[ext_resource type="Texture2D" uid="uid://dopenmdup38i" path="res://art/PixelPlatformerSet1v.1.1/letter.png" id="7_cyxgj"]
+[ext_resource type="Script" path="res://scripts/Letter.gd" id="8_agg0a"]
+[ext_resource type="FontFile" uid="uid://8kmieqk7u8ho" path="res://fonts/LastPriestess.ttf" id="9_eq2q4"]
+[ext_resource type="AudioStream" uid="uid://cfqidwiok66j7" path="res://audio/paper.wav" id="10_cafdt"]
+[ext_resource type="PackedScene" uid="uid://b2ow1ou5y8kgi" path="res://scenes/killzone.tscn" id="11_lt4sh"]
+[ext_resource type="PackedScene" uid="uid://cnpufhcnp0uly" path="res://scenes/player.tscn" id="12_mjrvq"]
+[ext_resource type="PackedScene" uid="uid://5hdxsgxpydhb" path="res://scenes/letter_pickup_area.tscn" id="13_g1orq"]
+[ext_resource type="PackedScene" uid="uid://b7ynhp24wnab4" path="res://scenes/scene_transition_animation.tscn" id="14_13rvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4h1rq"]
-texture = ExtResource("2_hxbjq")
+texture = ExtResource("2_3rwg3")
 0:25/0 = 0
 1:25/0 = 0
 2:25/0 = 0
@@ -203,7 +203,7 @@ offset_left = -342.0
 offset_top = -839.0
 offset_right = 1140.0
 offset_bottom = 337.0
-texture = ExtResource("1_rtgvv")
+texture = ExtResource("1_opm82")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -214,28 +214,28 @@ layer_0/tile_data = PackedInt32Array(65524, 1048576, 25, 131060, 1048576, 26, 19
 
 [node name="IntactWindows" type="Sprite2D" parent="."]
 position = Vector2(354, -131)
-texture = ExtResource("3_pelwt")
+texture = ExtResource("3_es3yn")
 
 [node name="IntactWindows2" type="Sprite2D" parent="."]
 position = Vector2(817, -132)
-texture = ExtResource("3_pelwt")
+texture = ExtResource("3_es3yn")
 
 [node name="IntactWindows3" type="Sprite2D" parent="."]
 position = Vector2(122, -131)
-texture = ExtResource("3_pelwt")
+texture = ExtResource("3_es3yn")
 
 [node name="BrokenWindows" type="Sprite2D" parent="."]
 position = Vector2(597, -134)
-texture = ExtResource("4_6xm80")
+texture = ExtResource("4_ckjds")
 
-[node name="Sunlight" parent="." instance=ExtResource("5_23pbh")]
+[node name="Sunlight" parent="." instance=ExtResource("5_782bj")]
 position = Vector2(603, -57)
 scale = Vector2(0.955, 0.955)
 cycle = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(316, 61)
-script = ExtResource("6_sxjv0")
+script = ExtResource("6_gbxoe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(222.5, -85.5)
@@ -243,32 +243,32 @@ shape = SubResource("RectangleShape2D_cq3nj")
 
 [node name="Letter" type="Sprite2D" parent="Area2D"]
 position = Vector2(224, -78)
-texture = ExtResource("7_glllg")
-script = ExtResource("8_0r2vo")
+texture = ExtResource("7_cyxgj")
+script = ExtResource("8_agg0a")
 
 [node name="Label" type="Label" parent="Area2D"]
 offset_left = 217.0
 offset_top = -111.0
 offset_right = 352.0
 offset_bottom = -85.0
-theme_override_fonts/font = ExtResource("9_rnq3x")
+theme_override_fonts/font = ExtResource("9_eq2q4")
 theme_override_font_sizes/font_size = 14
 text = "[E]"
 metadata/_edit_use_anchors_ = true
 
 [node name="PaperSound" type="AudioStreamPlayer2D" parent="Area2D"]
 position = Vector2(224, -78)
-stream = ExtResource("10_n2n8u")
+stream = ExtResource("10_cafdt")
 bus = &"SFX"
 
-[node name="Killzone" parent="." instance=ExtResource("11_cd7ck")]
+[node name="Killzone" parent="." instance=ExtResource("11_lt4sh")]
 position = Vector2(-60, 91)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(569, 0)
 shape = SubResource("RectangleShape2D_kntmf")
 
-[node name="player" parent="." instance=ExtResource("12_4mnok")]
+[node name="player" parent="." instance=ExtResource("12_mjrvq")]
 position = Vector2(0, 2)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -277,10 +277,10 @@ zoom = Vector2(2, 2)
 limit_left = -320
 limit_bottom = 167
 
-[node name="Letter pickup area" parent="." instance=ExtResource("14_5kior")]
+[node name="Letter pickup area" parent="." instance=ExtResource("13_g1orq")]
 position = Vector2(892, -49)
 
-[node name="SceneTransitionAnimation" parent="." instance=ExtResource("13_dugya")]
+[node name="SceneTransitionAnimation" parent="." instance=ExtResource("14_13rvm")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
