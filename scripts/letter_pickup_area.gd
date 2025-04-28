@@ -19,7 +19,7 @@ func _on_body_entered(body: Node2D) -> void:
 		PaperUi.show_letter()
 		
 		
-		# Change scenes back to starting room
-		#SceneTransitionAnimation.play("fade_in")
-		#await get_tree().create_timer(1.5).timeout
-		#get_tree().change_scene_to_file("res://scenes/game_level.tscn")
+func change_scene():# Change scenes back to starting room
+	SceneTransitionAnimation.play("fade_in")
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/game_level.tscn")
