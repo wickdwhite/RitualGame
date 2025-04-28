@@ -93,5 +93,5 @@ func _physics_process(delta):
 	var isLeft = velocity.x < 0
 	animated_sprite_2d.flip_h = isLeft
 	
-func collect_letter():
-	letters_collected += 1
+#func collect_letter():
+#	letters_collected += 1
