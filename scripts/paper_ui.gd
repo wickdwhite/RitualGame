@@ -29,6 +29,10 @@ func show_letter():
 	visible = true
 
 func _on_close_pressed():
+	# Have to reassign with each new letter
+	PickupArea = get_node("/root/Node2D/Letter pickup area")
+	
+	print(":here0")
 	visible = false
 	PickupArea.change_scene()
 

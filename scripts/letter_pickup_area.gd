@@ -20,6 +20,8 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		
 func change_scene():# Change scenes back to starting room
+	print("here1")
 	SceneTransitionAnimation.play("fade_in")
+	print("here2")
 	await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file("res://scenes/game_level.tscn")
