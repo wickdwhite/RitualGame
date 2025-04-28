@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://brrsqo6wpo5ww"]
+[gd_scene load_steps=4 format=3 uid="uid://brrsqo6wpo5ww"]
 
+[ext_resource type="Script" path="res://scripts/paper_ui.gd" id="1_8vfb5"]
 [ext_resource type="Texture2D" uid="uid://c6i4r4mbtqiqi" path="res://art/PixelPlatformerSet1v.1.1/paper.png" id="1_854tc"]
 [ext_resource type="FontFile" uid="uid://8kmieqk7u8ho" path="res://fonts/LastPriestess.ttf" id="2_mh6ca"]
 
 [node name="paperUI" type="CanvasLayer"]
+script = ExtResource("1_8vfb5")
 
 [node name="Paper" type="Sprite2D" parent="."]
 position = Vector2(624, 352)
@@ -63,7 +65,7 @@ it with open arms.
 Yours, more than I ever intended to be,
 E"
 
-[node name="Button" type="Button" parent="."]
+[node name="CloseButton" type="Button" parent="."]
 offset_left = 808.0
 offset_top = 72.0
 offset_right = 834.0
