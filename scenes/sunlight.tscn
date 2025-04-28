@@ -6,11 +6,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aew07"]
 shader = ExtResource("1_gummc")
-shader_parameter/angle = 0.35
-shader_parameter/position = 0.0
-shader_parameter/spread = 0.29
+shader_parameter/angle = 0.44
+shader_parameter/position = 0.045
+shader_parameter/spread = 0.096
 shader_parameter/cutoff = 0.235
-shader_parameter/falloff = 0.13
+shader_parameter/falloff = 0.125
 shader_parameter/edge_fade = 0.311
 shader_parameter/speed = 1.0
 shader_parameter/ray1_density = 8.0
@@ -22,20 +22,20 @@ shader_parameter/seed = 5.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o32by"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oacn2"]
-size = Vector2(19, 80)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1swu8"]
+size = Vector2(36, 123)
 
 [node name="Sunlight" type="Node2D"]
 script = ExtResource("1_y74j6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_aew07")
-position = Vector2(-0.999998, -1)
-scale = Vector2(54.5, 80.5)
+position = Vector2(1, 2)
+scale = Vector2(167.25, 124.25)
 texture = SubResource("PlaceholderTexture2D_o32by")
 
 [node name="Killzone" parent="." instance=ExtResource("2_iko0o")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(6.5, -1)
-shape = SubResource("RectangleShape2D_oacn2")
+position = Vector2(-2, 2)
+shape = SubResource("RectangleShape2D_1swu8")

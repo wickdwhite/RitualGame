@@ -190,8 +190,8 @@ position = Vector2(563, -193)
 texture = ExtResource("4_wjd7y")
 
 [node name="Sunlight" parent="." instance=ExtResource("3_y01op")]
-position = Vector2(558, -120)
-scale = Vector2(1.52, 1.52)
+position = Vector2(575, -116)
+scale = Vector2(0.955, 0.955)
 cycle = true
 
 [node name="Area2D" type="Area2D" parent="."]
