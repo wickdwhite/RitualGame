@@ -7,8 +7,9 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	#player.visible = false
-	print("You died")
-	timer.start()
+	if body.name == "player":
+		print("You died")
+		timer.start()
 	
 
 
