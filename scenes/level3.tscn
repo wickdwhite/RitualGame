@@ -195,6 +195,9 @@ size = Vector2(53, 47)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kntmf"]
 size = Vector2(1998, 20)
 
+[sub_resource type="Animation" id="Animation_rn0j1"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_ypkh7"]
 resource_name = "move"
 length = 2.0
@@ -212,13 +215,26 @@ tracks/0/keys = {
 "values": [Vector2(-54, 11), Vector2(244, 11)]
 }
 
-[sub_resource type="Animation" id="Animation_rn0j1"]
-length = 0.001
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhv4k"]
 _data = {
 "RESET": SubResource("Animation_rn0j1"),
 "move": SubResource("Animation_ypkh7")
+}
+
+[sub_resource type="Animation" id="Animation_diobh"]
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(340, -192), Vector2(340, 26)]
 }
 
 [sub_resource type="Animation" id="Animation_o6psf"]
@@ -238,9 +254,14 @@ tracks/0/keys = {
 "values": [Vector2(340, -192)]
 }
 
-[sub_resource type="Animation" id="Animation_diobh"]
-length = 2.0
-loop_mode = 2
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6xhj"]
+_data = {
+"RESET": SubResource("Animation_diobh"),
+"move": SubResource("Animation_o6psf")
+}
+
+[sub_resource type="Animation" id="Animation_jis2y"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -248,16 +269,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(340, -192), Vector2(340, 26)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6xhj"]
-_data = {
-"RESET": SubResource("Animation_diobh"),
-"move": SubResource("Animation_o6psf")
+"values": [Vector2(684, 13)]
 }
 
 [sub_resource type="Animation" id="Animation_vxfsn"]
@@ -275,21 +290,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(684, 13), Vector2(430, 13)]
-}
-
-[sub_resource type="Animation" id="Animation_jis2y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(684, 13)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iqln0"]
@@ -376,7 +376,7 @@ position = Vector2(892, -49)
 [node name="SceneTransitionAnimation" parent="." instance=ExtResource("14_j026s")]
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("15_ckkbm")]
-position = Vector2(244, 11)
+position = Vector2(-54, 11)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
 libraries = {

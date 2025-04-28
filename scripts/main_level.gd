@@ -7,10 +7,29 @@ func _ready():
 	AudioPlayer.play_music_level()
 	SceneTransitionAnimation.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransitionAnimation.play("fade_out")
-	if !Global.intro_seen:
-		await get_tree().create_timer(0.5).timeout
-		DialogueManager.show_dialogue_balloon(resource, "start")
-		Global.intro_seen=true
+	#if !Global.intro_seen:
+		#await get_tree().create_timer(0.5).timeout
+		#DialogueManager.show_dialogue_balloon(resource, "start")
+		#Global.intro_seen=true
+	match Global.letters_collected:
+		0:
+			await get_tree().create_timer(0.5).timeout
+			DialogueManager.show_dialogue_balloon(resource, "start")
+			Global.intro_seen=true
+		1:
+			DialogueManager.show_dialogue_balloon(resource, "letter1")
+		2:
+			DialogueManager.show_dialogue_balloon(resource, "letter2")
+		3:
+			DialogueManager.show_dialogue_balloon(resource, "letter3")
+		4:
+			DialogueManager.show_dialogue_balloon(resource, "letter4")
+		5:
+			DialogueManager.show_dialogue_balloon(resource, "letter5")
+		6:
+			DialogueManager.show_dialogue_balloon(resource, "letter6")
+		_:
+			DialogueManager.show_dialogue_balloon(resource, "letter1")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

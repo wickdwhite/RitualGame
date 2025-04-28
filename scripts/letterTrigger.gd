@@ -34,21 +34,21 @@ func _process(_delta):
 		label.hide()
 		interact_tutorial_seen=true;
 		$PaperSound.play()
-		match Global.letters_collected:
-			0:
-				DialogueManager.show_dialogue_balloon(resource, "letter1")
-			1:
-				DialogueManager.show_dialogue_balloon(resource, "letter2")
-			2:
-				DialogueManager.show_dialogue_balloon(resource, "letter3")
-			3:
-				DialogueManager.show_dialogue_balloon(resource, "letter4")
-			4:
-				DialogueManager.show_dialogue_balloon(resource, "letter5")
-			5:
-				DialogueManager.show_dialogue_balloon(resource, "letter6")
-			_:
-				DialogueManager.show_dialogue_balloon(resource, "letter1")
+		#match Global.letters_collected:
+			#0:
+				#DialogueManager.show_dialogue_balloon(resource, "letter1")
+			#1:
+				#DialogueManager.show_dialogue_balloon(resource, "letter2")
+			#2:
+				#DialogueManager.show_dialogue_balloon(resource, "letter3")
+			#3:
+				#DialogueManager.show_dialogue_balloon(resource, "letter4")
+			#4:
+				#DialogueManager.show_dialogue_balloon(resource, "letter5")
+			#5:
+				#DialogueManager.show_dialogue_balloon(resource, "letter6")
+			#_:
+				#DialogueManager.show_dialogue_balloon(resource, "letter1")
 		print("grabbed")
 		player.holding_letter = true
 		
