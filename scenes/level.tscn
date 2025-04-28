@@ -192,6 +192,7 @@ texture = ExtResource("4_wjd7y")
 [node name="Sunlight" parent="." instance=ExtResource("3_y01op")]
 position = Vector2(558, -120)
 scale = Vector2(1.52, 1.52)
+cycle = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(136, -3)
