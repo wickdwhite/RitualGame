@@ -39,7 +39,7 @@ func _process(delta):
 
 
 func _on_leave_room_body_entered(body):
-	if Global.letters_collected < 6:
+	if body.name == "player" and Global.letters_collected < 6:
 		SceneTransitionAnimation.play("fade_in")
 		await get_tree().create_timer(1.5).timeout
 		Global.intro_seen = true
