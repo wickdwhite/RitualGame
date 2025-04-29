@@ -231,7 +231,7 @@ stretch_mode = 1
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1287.75, 269)
+position = Vector2(1095, 269)
 shape = SubResource("RectangleShape2D_sflyf")
 
 [node name="SceneTransitionAnimation" parent="." instance=ExtResource("8_l3j7o")]

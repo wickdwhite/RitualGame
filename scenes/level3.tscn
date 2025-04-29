@@ -370,11 +370,6 @@ zoom = Vector2(2, 2)
 limit_left = -320
 limit_bottom = 167
 
-[node name="Letter pickup area" parent="." instance=ExtResource("13_e8w2n")]
-position = Vector2(892, -49)
-
-[node name="SceneTransitionAnimation" parent="." instance=ExtResource("14_j026s")]
-
 [node name="AnimatableBody2D" parent="." instance=ExtResource("15_ckkbm")]
 position = Vector2(-54, 11)
 
@@ -401,6 +396,11 @@ libraries = {
 "": SubResource("AnimationLibrary_iqln0")
 }
 autoplay = "move"
+
+[node name="Letter pickup area" parent="." instance=ExtResource("13_e8w2n")]
+position = Vector2(892, -49)
+
+[node name="SceneTransitionAnimation" parent="." instance=ExtResource("14_j026s")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

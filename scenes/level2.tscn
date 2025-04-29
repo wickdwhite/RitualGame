@@ -320,7 +320,6 @@ limit_bottom = 167
 position = Vector2(892, -49)
 
 [node name="SceneTransitionAnimation" parent="." instance=ExtResource("14_a8bhe")]
-visible = false
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("15_jewaa")]
 position = Vector2(472, -117)
