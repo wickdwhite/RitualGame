@@ -28,8 +28,10 @@ func _ready():
 			DialogueManager.show_dialogue_balloon(resource, "letter5")
 		6:
 			DialogueManager.show_dialogue_balloon(resource, "letter6")
+			DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 		_:
-			DialogueManager.show_dialogue_balloon(resource, "letter1")
+			DialogueManager.show_dialogue_balloon(resource, "letter6")
+			DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -41,3 +43,8 @@ func _on_leave_room_body_entered(body):
 	await get_tree().create_timer(1.5).timeout
 	Global.intro_seen = true
 	get_tree().change_scene_to_file("res://scenes/hall.tscn") 
+	
+func _on_dialogue_ended(resource):
+	SceneTransitionAnimation.play("fade_in")
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/endroom.tscn") 

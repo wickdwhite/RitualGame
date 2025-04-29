@@ -28,4 +28,3 @@ func _on_dialogue_ended(resource):
 	endtext.visible = true
 	await get_tree().create_timer(5.0).timeout 
 	get_tree().quit()
-
